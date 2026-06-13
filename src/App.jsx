@@ -217,8 +217,36 @@ function IntervalBar({ intervals, color }) {
 }
 
 function PreMatch({ m }) {
-  const { pre, h2h, home, away } = m;
-  if (!pre) return null;
+  const { pre: staticPre, h2h: staticH2h, home, away } = m;
+  const [liveData, setLiveData] = useState(null);
+  const [loading, setLoading] = useState(!staticPre);
+
+  useEffect(() => {
+    if (staticPre) return; // already have static data
+    setLoading(true);
+    fetch(`/api/analysis?home=${encodeURIComponent(home)}&away=${encodeURIComponent(away)}`)
+      .then(r => r.json())
+      .then(data => { setLiveData(data); setLoading(false); })
+      .catch(() => setLoading(false));
+  }, [home, away]);
+
+  const pre = staticPre || liveData;
+  const h2h = staticH2h || liveData?.h2h || [];
+
+  if (loading) return (
+    <div style={{textAlign:"center",padding:40,color:"#8899aa"}}>
+      <div style={{fontSize:32,marginBottom:12}}>🔍</div>
+      <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:14,letterSpacing:2,textTransform:"uppercase"}}>Buscando estadísticas...</div>
+      <div style={{fontSize:11,color:"#556677",marginTop:6}}>Consultando datos reales del partido</div>
+    </div>
+  );
+
+  if (!pre) return (
+    <div style={{textAlign:"center",padding:30,color:"#556677"}}>
+      <div style={{fontSize:11}}>No se encontraron datos. Intenta de nuevo.</div>
+    </div>
+  );
+
   const { home: ph, away: pa, prediction } = pre;
 
   return (
