@@ -444,7 +444,7 @@ const FLAGS = {
 };
 const flag = name => FLAGS[name] || "🏳️";
 
-
+const SCORERS = [
   {pos:1, name:"Folarin Balogun", country:"EE.UU.", goals:2, assists:0, matches:1, flag:"🇺🇸"},
   {pos:2, name:"Raúl Jiménez", country:"México", goals:1, assists:0, matches:1, flag:"🇲🇽"},
   {pos:2, name:"Hirving Lozano", country:"México", goals:1, assists:1, matches:1, flag:"🇲🇽"},
