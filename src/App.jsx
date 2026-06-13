@@ -52,7 +52,7 @@ const MATCHES = [
     pre:{
       home:{name:"Qatar",wins:38,draws:22,losses:40,goalsFor:1.4,goalsAgainst:1.8,cornersAvg:4.2,yellowAvg:2.1,redAvg:0.2,ranking:56,keyPlayers:"Akram Afif · Almoez Ali · Issa Laye",note:"Clasificó vía play-off en Asia. Concedió 28 goles en clasificación.",goalIntervals:[{l:"1-15",v:12},{l:"16-30",v:18},{l:"31-45",v:22},{l:"46-60",v:15},{l:"61-75",v:19},{l:"76-90",v:14}]},
       away:{name:"Suiza",wins:62,draws:18,losses:20,goalsFor:2.3,goalsAgainst:0.9,cornersAvg:6.8,yellowAvg:1.0,redAvg:0.0,ranking:19,keyPlayers:"Granit Xhaka · Breel Embolo · Dan Ndoye",note:"Invicta en clasificatoria. 14 goles en 6 partidos. Max 1 amarilla en últimos 5.",goalIntervals:[{l:"1-15",v:15},{l:"16-30",v:20},{l:"31-45",v:18},{l:"46-60",v:22},{l:"61-75",v:14},{l:"76-90",v:11}]},
-      prediction:"Suiza gana (~72%). Partido cerrado, resultado esperado 0-2."
+      prediction:{winner:"Suiza",homeWinPct:12,drawPct:16,awayWinPct:72,mostLikelyScore:"0-2",confidence:"Alta",tactical:"Suiza dominará la posesión y presionará alto. Qatar buscará el contraataque con Afif y Almoez Ali. Los suizos tienen ventaja en cada línea del campo.",keyFactors:["Suiza rankeada 19 vs Qatar 56 en FIFA","Qatar concedió 28 goles en clasificación asiática","Xhaka y Freuler controlarán el mediocampo","Lopetegui buscará mantener el 0-0 el mayor tiempo posible"],summary:"Suiza es amplia favorita. Su solidez defensiva y calidad ofensiva deberían ser demasiado para Qatar. Se espera un partido cerrado en la primera mitad pero Suiza debería sentenciar en el segundo tiempo."}
     }
   },
   {
@@ -63,7 +63,7 @@ const MATCHES = [
     pre:{
       home:{name:"Brasil",wins:71,draws:15,losses:14,goalsFor:2.8,goalsAgainst:0.9,cornersAvg:7.2,yellowAvg:1.8,redAvg:0.1,ranking:3,keyPlayers:"Vinicius Jr · Raphinha · Rodrygo",note:"Sin Neymar (lesión). Raphinha: 13 goles en La Liga. Ganó 7 de 8 vs África.",goalIntervals:[{l:"1-15",v:14},{l:"16-30",v:19},{l:"31-45",v:21},{l:"46-60",v:18},{l:"61-75",v:16},{l:"76-90",v:12}]},
       away:{name:"Marruecos",wins:55,draws:20,losses:25,goalsFor:1.6,goalsAgainst:0.8,cornersAvg:5.1,yellowAvg:2.3,redAvg:0.2,ranking:14,keyPlayers:"Achraf Hakimi · Brahim Diaz · Ismael Saibari",note:"Semifinalistas 2022. El 44% de sus goles después del min 61.",goalIntervals:[{l:"1-15",v:8},{l:"16-30",v:12},{l:"31-45",v:16},{l:"46-60",v:20},{l:"61-75",v:24},{l:"76-90",v:20}]},
-      prediction:"Brasil favorito (~58%). Partido cerrado en 1a mitad, Brasil rompe en el 2o tiempo."
+      prediction:{winner:"Brasil",homeWinPct:58,drawPct:24,awayWinPct:18,mostLikelyScore:"2-0",confidence:"Media",tactical:"Marruecos se cerrará atrás con bloque bajo y buscará el contraataque rápido. Brasil necesitará paciencia — Vinicius Jr y Raphinha serán clave para romper la defensa marroquí por las bandas.",keyFactors:["Brasil sin Neymar pero con Vinicius Jr en gran forma","Marruecos llegó a semis en 2022 con la misma defensa sólida","44% de goles de Marruecos llegan después del min 61","Brasil ganó 7 de 8 partidos mundialistas contra equipos africanos"],summary:"Brasil es favorito pero Marruecos es un rival muy difícil. Los Atlas Lions defenderán compactos y buscarán sorprender en el contraataque. Brasil debería ganar pero no será fácil."}
     }
   },
   {
@@ -74,7 +74,7 @@ const MATCHES = [
     pre:{
       home:{name:"Alemania",wins:68,draws:15,losses:17,goalsFor:2.9,goalsAgainst:0.8,cornersAvg:8.1,yellowAvg:1.6,redAvg:0.0,ranking:4,keyPlayers:"Florian Wirtz · Jamal Musiala · Kai Havertz",note:"Campeona Eurocopa 2024. Favorita absoluta del grupo.",goalIntervals:[{l:"1-15",v:18},{l:"16-30",v:20},{l:"31-45",v:19},{l:"46-60",v:17},{l:"61-75",v:14},{l:"76-90",v:12}]},
       away:{name:"Curazao",wins:20,draws:18,losses:62,goalsFor:0.8,goalsAgainst:2.2,cornersAvg:3.1,yellowAvg:2.9,redAvg:0.3,ranking:78,keyPlayers:"Leandro Bacuna · Jurickson Profar · Cuco Martina",note:"Primera Copa del Mundo. Debutante historico de CONCACAF.",goalIntervals:[{l:"1-15",v:10},{l:"16-30",v:14},{l:"31-45",v:18},{l:"46-60",v:20},{l:"61-75",v:22},{l:"76-90",v:16}]},
-      prediction:"Alemania gana con claridad (~91%). Se esperan 3+ goles y muchos corners."
+      prediction:{winner:"Alemania",homeWinPct:91,drawPct:6,awayWinPct:3,mostLikelyScore:"4-0",confidence:"Muy Alta",tactical:"Alemania dominará completamente con Musiala y Wirtz creando constantemente. Curazao se cerrará atrás pero no tendrá recursos para aguantar 90 minutos ante la presión alemana.",keyFactors:["Diferencia de 74 posiciones en ranking FIFA","Alemania campeona de la Eurocopa 2024","Curazao debuta en su primer Mundial","Musiala y Wirtz son imparables en este nivel"],summary:"Una de las diferencias de nivel más grandes del torneo. Alemania debería golear con comodidad y Curazao se limitará a intentar minimizar el marcador."}
     }
   },
   {
@@ -85,7 +85,7 @@ const MATCHES = [
     pre:{
       home:{name:"Paises Bajos",wins:60,draws:18,losses:22,goalsFor:2.2,goalsAgainst:1.0,cornersAvg:7.0,yellowAvg:1.8,redAvg:0.1,ranking:8,keyPlayers:"Cody Gakpo · Van Dijk · Xavi Simons",note:"Semifinalistas 2022. Remontaron 0-2 a Japon en Qatar. Sin Depay.",goalIntervals:[{l:"1-15",v:15},{l:"16-30",v:18},{l:"31-45",v:20},{l:"46-60",v:19},{l:"61-75",v:16},{l:"76-90",v:12}]},
       away:{name:"Japon",wins:55,draws:20,losses:25,goalsFor:1.8,goalsAgainst:1.1,cornersAvg:5.3,yellowAvg:1.5,redAvg:0.1,ranking:17,keyPlayers:"Takefusa Kubo · Wataru Endo · Kaoru Mitoma",note:"Eliminaron a Alemania y España en 2022. Peligrosos en contraataque.",goalIntervals:[{l:"1-15",v:14},{l:"16-30",v:16},{l:"31-45",v:22},{l:"46-60",v:20},{l:"61-75",v:16},{l:"76-90",v:12}]},
-      prediction:"Paises Bajos favorita (~55%). Japon puede sorprender como en 2022."
+      prediction:{winner:"Paises Bajos",homeWinPct:55,drawPct:20,awayWinPct:25,mostLikelyScore:"2-1",confidence:"Media",tactical:"Países Bajos buscará controlar el partido con Van Dijk sólido atrás y Gakpo amenazando arriba. Japón intentará sorprender en el contraataque como hizo contra Alemania y España en 2022.",keyFactors:["Japón eliminó a Alemania y España en el Mundial 2022","Países Bajos remontó 0-2 a Japón en octavos de Qatar","Kubo y Mitoma son devastadores en transición","Van Dijk es uno de los mejores defensas del mundo"],summary:"Partido muy parejo entre dos selecciones que se conocen bien. Países Bajos parte favorita pero Japón tiene capacidad para sorprender. Se esperan goles en ambas porterías."}
     }
   },
 ];
@@ -336,9 +336,9 @@ function PreMatch({ m }) {
       <div style={{...SEC,borderColor:"#00d4aa50"}}>
         <div style={STIT}>🔮 Prediccion de la IA</div>
 
-        {/* Probabilities */}
-        <div style={{display:"flex",marginBottom:10}}>
-          <div style={{flex:pre.prediction.homeWinPct,background:"linear-gradient(90deg,#00d4aa,#00b894)",padding:"8px 4px",textAlign:"center",borderRadius:"6px 0 0 6px"}}>
+        {/* Win probabilities */}
+        <div style={{display:"flex",marginBottom:10,borderRadius:8,overflow:"hidden"}}>
+          <div style={{flex:pre.prediction.homeWinPct,background:"linear-gradient(90deg,#00d4aa,#00b894)",padding:"8px 4px",textAlign:"center"}}>
             <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:18,fontWeight:800,color:"#0a0e1a"}}>{pre.prediction.homeWinPct}%</div>
             <div style={{fontSize:8,color:"#0a0e1a",fontWeight:700}}>LOCAL</div>
           </div>
@@ -346,33 +346,61 @@ function PreMatch({ m }) {
             <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:18,fontWeight:800,color:"#0a0e1a"}}>{pre.prediction.drawPct}%</div>
             <div style={{fontSize:8,color:"#0a0e1a",fontWeight:700}}>EMPATE</div>
           </div>
-          <div style={{flex:pre.prediction.awayWinPct,background:"linear-gradient(90deg,#e84393,#c0366a)",padding:"8px 4px",textAlign:"center",borderRadius:"0 6px 6px 0"}}>
+          <div style={{flex:pre.prediction.awayWinPct,background:"linear-gradient(90deg,#e84393,#c0366a)",padding:"8px 4px",textAlign:"center"}}>
             <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:18,fontWeight:800,color:"#fff"}}>{pre.prediction.awayWinPct}%</div>
             <div style={{fontSize:8,color:"#fff",fontWeight:700}}>VISITANTE</div>
           </div>
         </div>
 
-        {/* Most likely score */}
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:10}}>
-          <div>
-            <div style={{fontSize:9,color:"#8899aa",textTransform:"uppercase",letterSpacing:1}}>Marcador probable</div>
+        {/* Score + goals */}
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:10}}>
+          <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px"}}>
+            <div style={{fontSize:9,color:"#8899aa",textTransform:"uppercase",letterSpacing:1,marginBottom:4}}>Marcador probable</div>
             <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:28,fontWeight:800,color:"#fff",letterSpacing:3}}>{pre.prediction.mostLikelyScore}</div>
+            <div style={{fontSize:9,color:"#556677",marginTop:2}}>Confianza: <span style={{color:"#00d4aa"}}>{pre.prediction.confidence}</span></div>
           </div>
-          <div style={{textAlign:"right"}}>
-            <div style={{fontSize:9,color:"#8899aa",textTransform:"uppercase",letterSpacing:1}}>Confianza</div>
-            <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:700,color:"#00d4aa"}}>{pre.prediction.confidence}</div>
+          <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px"}}>
+            <div style={{fontSize:9,color:"#8899aa",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>Goles esperados</div>
+            <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}>
+              <span style={{fontSize:10,color:"#ccd"}}>{ph.name}</span>
+              <span style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:800,color:"#00d4aa"}}>{pre.prediction.homeExpectedGoals ?? (ph.goalsFor * 0.8).toFixed(1)}</span>
+            </div>
+            <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}>
+              <span style={{fontSize:10,color:"#ccd"}}>{pa.name}</span>
+              <span style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:800,color:"#e84393"}}>{pre.prediction.awayExpectedGoals ?? (pa.goalsFor * 0.8).toFixed(1)}</span>
+            </div>
+            <div style={{display:"flex",justifyContent:"space-between",borderTop:"1px solid #1e2d40",paddingTop:4}}>
+              <span style={{fontSize:10,color:"#8899aa"}}>Total</span>
+              <span style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:14,fontWeight:700,color:"#ffd700"}}>
+                {pre.prediction.totalExpectedGoals ?? ((ph.goalsFor + pa.goalsFor) * 0.8).toFixed(1)}
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Tactical analysis */}
-        <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:10}}>
+        {/* Over/Under */}
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:6,marginBottom:10}}>
+          {[
+            {label:"Más de 2.5",pct:pre.prediction.over25Pct ?? Math.round((ph.goalsFor+pa.goalsFor)*18),color:"#00d4aa"},
+            {label:"Ambos marcan",pct:pre.prediction.btsPct ?? Math.round((ph.goalsFor>1?60:40)*(pa.goalsFor>1?1.2:0.8)),color:"#ffd700"},
+            {label:"Menos de 2.5",pct:pre.prediction.under25Pct ?? Math.round(100-((ph.goalsFor+pa.goalsFor)*18)),color:"#e84393"},
+          ].map((s,i) => (
+            <div key={i} style={{background:"#0a0e1a",borderRadius:8,padding:"8px 6px",textAlign:"center"}}>
+              <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:20,fontWeight:800,color:s.color}}>{Math.min(95,Math.max(5,s.pct))}%</div>
+              <div style={{fontSize:8,color:"#8899aa",lineHeight:1.3}}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Tactical */}
+        <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:8}}>
           <div style={{fontSize:9,color:"#00d4aa",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>⚽ Analisis tactico</div>
           <div style={{fontSize:12,color:"#ccd",lineHeight:1.5}}>{pre.prediction.tactical}</div>
         </div>
 
         {/* Key factors */}
         {pre.prediction.keyFactors && (
-          <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:10}}>
+          <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:8}}>
             <div style={{fontSize:9,color:"#ffd700",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>⚠️ Factores clave</div>
             {pre.prediction.keyFactors.map((f,i) => (
               <div key={i} style={{display:"flex",gap:8,alignItems:"flex-start",marginBottom:4}}>
@@ -384,15 +412,39 @@ function PreMatch({ m }) {
         )}
 
         {/* Summary */}
-        <div style={{background:"linear-gradient(135deg,#00d4aa15,#e8439315)",border:"1px solid #00d4aa30",borderRadius:8,padding:12}}>
+        <div style={{background:"linear-gradient(135deg,#00d4aa15,#e8439315)",border:"1px solid #00d4aa30",borderRadius:8,padding:12,marginBottom:8}}>
           <div style={{fontSize:12,color:"#e8eaf0",lineHeight:1.6,fontStyle:"italic"}}>{pre.prediction.summary}</div>
+        </div>
+
+        {/* Disclaimer */}
+        <div style={{fontSize:9,color:"#334455",textAlign:"center"}}>
+          ⚠️ Estimación estadística — no garantiza el resultado real
         </div>
       </div>
     </>
   );
 }
 
-const SCORERS = [
+const FLAGS = {
+  "México":"🇲🇽","Sudáfrica":"🇿🇦","Corea del Sur":"🇰🇷","Chequia":"🇨🇿",
+  "Canadá":"🇨🇦","Bosnia y Herz.":"🇧🇦","EE.UU.":"🇺🇸","Paraguay":"🇵🇾",
+  "Qatar":"🇶🇦","Suiza":"🇨🇭","Brasil":"🇧🇷","Marruecos":"🇲🇦",
+  "Alemania":"🇩🇪","Curazao":"🇨🇼","Paises Bajos":"🇳🇱","Japon":"🇯🇵",
+  "Argentina":"🇦🇷","Uruguay":"🇺🇾","Francia":"🇫🇷","España":"🇪🇸",
+  "Portugal":"🇵🇹","Inglaterra":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Bélgica":"🇧🇪","Croacia":"🇭🇷",
+  "Senegal":"🇸🇳","Ghana":"🇬🇭","Nigeria":"🇳🇬","Camerún":"🇨🇲",
+  "Costa de Marfil":"🇨🇮","Egipto":"🇪🇬","Algeria":"🇩🇿","Túnez":"🇹🇳",
+  "DR Congo":"🇨🇩","Cabo Verde":"🇨🇻","Arabia Saudita":"🇸🇦","Irán":"🇮🇷",
+  "Japón":"🇯🇵","Australia":"🇦🇺","Corea":"🇰🇷","Iraq":"🇮🇶",
+  "Uzbekistán":"🇺🇿","Jordania":"🇯🇴","Colombia":"🇨🇴","Ecuador":"🇪🇨",
+  "Chile":"🇨🇱","Perú":"🇵🇪","Venezuela":"🇻🇪","Bolivia":"🇧🇴",
+  "Panamá":"🇵🇦","Haití":"🇭🇹","Nueva Zelanda":"🇳🇿","Escocia":"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  "Suecia":"🇸🇪","Noruega":"🇳🇴","Austria":"🇦🇹","Turquía":"🇹🇷",
+  "Serbia":"🇷🇸","Países Bajos":"🇳🇱","Holanda":"🇳🇱","Dinamarca":"🇩🇰",
+};
+const flag = name => FLAGS[name] || "🏳️";
+
+
   {pos:1, name:"Folarin Balogun", country:"EE.UU.", goals:2, assists:0, matches:1, flag:"🇺🇸"},
   {pos:2, name:"Raúl Jiménez", country:"México", goals:1, assists:0, matches:1, flag:"🇲🇽"},
   {pos:2, name:"Hirving Lozano", country:"México", goals:1, assists:1, matches:1, flag:"🇲🇽"},
@@ -659,9 +711,15 @@ export default function App() {
               background:sel?.id===m.id?"#00d4aa10":"#111827"
             }}>
               <div style={{fontSize:8,color:"#00d4aa",fontFamily:"'Barlow Condensed',sans-serif",letterSpacing:1,textTransform:"uppercase",marginBottom:4}}>{m.group} · {m.date}</div>
-              <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:12,fontWeight:700}}>{m.home}</div>
-              <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:20,fontWeight:800,letterSpacing:2,color:"#fff",margin:"2px 0"}}>{m.status!=="upcoming"?`${m.hs}–${m.as}`:"vs"}</div>
-              <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:12,fontWeight:700,marginBottom:5}}>{m.away}</div>
+              <div style={{display:"flex",alignItems:"center",gap:4,marginBottom:2}}>
+                <span style={{fontSize:16}}>{flag(m.home)}</span>
+                <span style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:12,fontWeight:700}}>{m.home}</span>
+              </div>
+              <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:20,fontWeight:800,letterSpacing:2,color:"#fff",margin:"2px 0",paddingLeft:4}}>{m.status!=="upcoming"?`${m.hs}–${m.as}`:"vs"}</div>
+              <div style={{display:"flex",alignItems:"center",gap:4,marginBottom:5}}>
+                <span style={{fontSize:16}}>{flag(m.away)}</span>
+                <span style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:12,fontWeight:700}}>{m.away}</span>
+              </div>
               <span style={{fontSize:9,padding:"2px 5px",borderRadius:3,background:`${sc(m.status)}20`,color:sc(m.status),fontFamily:"'Barlow Condensed',sans-serif",fontWeight:700,letterSpacing:0.5,textTransform:"uppercase"}}>
                 {m.status==="final"?"Final":m.status==="live"?"En vivo":"Proximo"}
               </span>
@@ -681,7 +739,9 @@ export default function App() {
               <div style={{background:"linear-gradient(135deg,#0d1b2a,#1a0a2e)",border:"1px solid #1e2d40",borderRadius:10,padding:14,marginBottom:10,textAlign:"center"}}>
                 <div style={{fontSize:9,color:"#00d4aa",letterSpacing:1.5,textTransform:"uppercase",marginBottom:6}}>{activeSel.group} · {activeSel.date} · {activeSel.venue}</div>
                 <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:10}}>
-                  <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:800,flex:1,textAlign:"right"}}>{activeSel.home}</div>
+                  <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:800,flex:1,textAlign:"right"}}>
+                    {flag(activeSel.home)} {activeSel.home}
+                  </div>
                   <div style={{textAlign:"center"}}>
                     <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:40,fontWeight:800,letterSpacing:3,lineHeight:1}}>
                       {activeSel.status!=="upcoming"?`${activeSel.hs} — ${activeSel.as}`:"vs"}
@@ -690,7 +750,9 @@ export default function App() {
                       {activeSel.status==="final"?"Final":activeSel.status==="live"?"En vivo":"Proximo"}
                     </span>
                   </div>
-                  <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:800,flex:1,textAlign:"left"}}>{activeSel.away}</div>
+                  <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:800,flex:1,textAlign:"left"}}>
+                    {activeSel.away} {flag(activeSel.away)}
+                  </div>
                 </div>
               </div>
 

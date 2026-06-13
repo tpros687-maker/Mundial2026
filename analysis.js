@@ -18,11 +18,9 @@ export default async function handler(req, res) {
         system: `You are a football analyst. Search for real current data and return ONLY a valid JSON object, no markdown, no explanation. Use exactly this structure:
 {
   "home": {
-    "name": "Team",
-    "wins": 55, "draws": 20, "losses": 25,
+    "name": "Team", "wins": 55, "draws": 20, "losses": 25,
     "goalsFor": 1.8, "goalsAgainst": 1.1,
-    "cornersAvg": 5.3, "yellowAvg": 1.5, "redAvg": 0.1,
-    "ranking": 17,
+    "cornersAvg": 5.3, "yellowAvg": 1.5, "redAvg": 0.1, "ranking": 17,
     "keyPlayers": "Player1 · Player2 · Player3",
     "note": "Context note",
     "goalIntervals": [{"l":"1-15","v":14},{"l":"16-30","v":16},{"l":"31-45","v":22},{"l":"46-60","v":20},{"l":"61-75","v":16},{"l":"76-90","v":12}]
@@ -31,19 +29,23 @@ export default async function handler(req, res) {
   "h2h": [{"year": 2022, "home": "Team1", "hs": 2, "as": 1, "away": "Team2"}],
   "prediction": {
     "winner": "Team name or Draw",
-    "homeWinPct": 45,
-    "drawPct": 25,
-    "awayWinPct": 30,
+    "homeWinPct": 45, "drawPct": 25, "awayWinPct": 30,
     "mostLikelyScore": "2-1",
+    "homeExpectedGoals": 1.4,
+    "awayExpectedGoals": 0.8,
+    "totalExpectedGoals": 2.2,
+    "over25Pct": 42,
+    "btsPct": 38,
+    "under25Pct": 58,
     "confidence": "Alta",
-    "tactical": "Brief tactical analysis of how the match will play out",
+    "tactical": "Brief tactical analysis",
     "keyFactors": ["Factor 1", "Factor 2", "Factor 3"],
     "summary": "2-3 sentence prediction summary"
   }
 }`,
         messages: [{
           role: 'user',
-          content: `Search for FIFA World Cup 2026 match: ${home} vs ${away}. Find current stats, form, injuries, head-to-head history, FIFA rankings, and generate a detailed match prediction. Return only the JSON.`
+          content: `Search for FIFA World Cup 2026 match: ${home} vs ${away}. Find current stats, form, injuries, FIFA rankings, head-to-head history. Calculate expected goals based on both teams attack and defense stats. Return only the JSON.`
         }]
       })
     });
