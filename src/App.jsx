@@ -334,9 +334,58 @@ function PreMatch({ m }) {
       </div>
 
       <div style={{...SEC,borderColor:"#00d4aa50"}}>
-        <div style={STIT}>🔮 Prediccion</div>
-        <div style={{background:"linear-gradient(135deg,#00d4aa15,#e8439315)",border:"1px solid #00d4aa30",borderRadius:8,padding:12,fontFamily:"'Barlow Condensed',sans-serif",fontSize:15,fontWeight:600,lineHeight:1.5,color:"#e8eaf0"}}>
-          {prediction}
+        <div style={STIT}>🔮 Prediccion de la IA</div>
+
+        {/* Probabilities */}
+        <div style={{display:"flex",marginBottom:10}}>
+          <div style={{flex:pre.prediction.homeWinPct,background:"linear-gradient(90deg,#00d4aa,#00b894)",padding:"8px 4px",textAlign:"center",borderRadius:"6px 0 0 6px"}}>
+            <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:18,fontWeight:800,color:"#0a0e1a"}}>{pre.prediction.homeWinPct}%</div>
+            <div style={{fontSize:8,color:"#0a0e1a",fontWeight:700}}>LOCAL</div>
+          </div>
+          <div style={{flex:pre.prediction.drawPct,background:"#ffd700",padding:"8px 4px",textAlign:"center"}}>
+            <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:18,fontWeight:800,color:"#0a0e1a"}}>{pre.prediction.drawPct}%</div>
+            <div style={{fontSize:8,color:"#0a0e1a",fontWeight:700}}>EMPATE</div>
+          </div>
+          <div style={{flex:pre.prediction.awayWinPct,background:"linear-gradient(90deg,#e84393,#c0366a)",padding:"8px 4px",textAlign:"center",borderRadius:"0 6px 6px 0"}}>
+            <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:18,fontWeight:800,color:"#fff"}}>{pre.prediction.awayWinPct}%</div>
+            <div style={{fontSize:8,color:"#fff",fontWeight:700}}>VISITANTE</div>
+          </div>
+        </div>
+
+        {/* Most likely score */}
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:10}}>
+          <div>
+            <div style={{fontSize:9,color:"#8899aa",textTransform:"uppercase",letterSpacing:1}}>Marcador probable</div>
+            <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:28,fontWeight:800,color:"#fff",letterSpacing:3}}>{pre.prediction.mostLikelyScore}</div>
+          </div>
+          <div style={{textAlign:"right"}}>
+            <div style={{fontSize:9,color:"#8899aa",textTransform:"uppercase",letterSpacing:1}}>Confianza</div>
+            <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontSize:16,fontWeight:700,color:"#00d4aa"}}>{pre.prediction.confidence}</div>
+          </div>
+        </div>
+
+        {/* Tactical analysis */}
+        <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:10}}>
+          <div style={{fontSize:9,color:"#00d4aa",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>⚽ Analisis tactico</div>
+          <div style={{fontSize:12,color:"#ccd",lineHeight:1.5}}>{pre.prediction.tactical}</div>
+        </div>
+
+        {/* Key factors */}
+        {pre.prediction.keyFactors && (
+          <div style={{background:"#0a0e1a",borderRadius:8,padding:"10px 14px",marginBottom:10}}>
+            <div style={{fontSize:9,color:"#ffd700",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>⚠️ Factores clave</div>
+            {pre.prediction.keyFactors.map((f,i) => (
+              <div key={i} style={{display:"flex",gap:8,alignItems:"flex-start",marginBottom:4}}>
+                <span style={{color:"#00d4aa",fontSize:10,marginTop:1}}>▸</span>
+                <span style={{fontSize:12,color:"#ccd",lineHeight:1.4}}>{f}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Summary */}
+        <div style={{background:"linear-gradient(135deg,#00d4aa15,#e8439315)",border:"1px solid #00d4aa30",borderRadius:8,padding:12}}>
+          <div style={{fontSize:12,color:"#e8eaf0",lineHeight:1.6,fontStyle:"italic"}}>{pre.prediction.summary}</div>
         </div>
       </div>
     </>
